@@ -1,0 +1,102 @@
+;; Object solution/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "solution/"
+  :tables (list 
+   (semanticdb-table "DecisionTree.java"
+    :major-mode 'jde-mode
+    :tags 
+        '( ("java.io.File" include nil nil [1 21])
+            ("java.lang.reflect.Array" include nil nil [22 53])
+            ("java.util.ArrayList" include nil nil [54 81])
+            ("java.util.Arrays" include nil nil [82 106])
+            ("java.util.HashMap" include nil nil [107 132])
+            ("java.util.HashSet" include nil nil [133 158])
+            ("java.util.Map" include nil nil [159 180])
+            ("java.util.Map.Entry" include nil nil [181 208])
+            ("java.util.Scanner" include nil nil [209 234])
+            ("DecisionTree" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("file2List" function
+                       (:constructor-flag t
+                        :throws ("Exception")
+                        :arguments 
+                          ( ("filename" variable (:type "String") (reparse-symbol formal_parameters) [475 490]))                          )
+                        (reparse-symbol class_member_declaration) [465 752])
+                    ("line2attribs" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("line" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [968 981])
+                            ("target" variable (:type "int") (reparse-symbol formal_parameters) [982 992]))                          )
+                        (reparse-symbol class_member_declaration) [955 1132])
+                    ("info" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("p" variable (:type "double") (reparse-symbol formal_parameters) [1206 1214]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1187 1268])
+                    ("getSubsetsByValues" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol formal_parameters) [1549 1554]))                          )
+                        (reparse-symbol class_member_declaration) [1508 1767])
+                    ("entropy" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("target" variable (:type "int") (reparse-symbol formal_parameters) [1974 1984]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [1929 2216])
+                    ("countValues" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("target" variable (:type "int") (reparse-symbol formal_parameters) [2480 2490]))                          )
+                        (reparse-symbol class_member_declaration) [2445 2713])
+                    ("mostCommonValue" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("target" variable (:type "int") (reparse-symbol formal_parameters) [2953 2963]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2901 3201])
+                    ("gain" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol formal_parameters) [3417 3422])
+                            ("target" variable (:type "int") (reparse-symbol formal_parameters) [3424 3434]))                          
+                        :type "double")
+                        (reparse-symbol class_member_declaration) [3376 3756])
+                    ("getBestAttribute" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("target" variable (:type "int") (reparse-symbol formal_parameters) [4065 4075]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [3980 4296])
+                    ("id3" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("target" variable (:type "int") (reparse-symbol formal_parameters) [4760 4770]))                          )
+                        (reparse-symbol class_member_declaration) [4726 5875])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [5954 5967]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5930 6563]))                  
+                :type "class")
+                nil [299 6565]))          
+    :file "DecisionTree.java"
+    :pointmax 6566
+    :fsize 6565
+    :lastmodtime '(21717 37622)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!fdiacobe!teaching!machineLearning!core!decisionTrees!code!solution!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
