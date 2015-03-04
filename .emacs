@@ -25,6 +25,36 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
  ;; If there is more than one, they won't work right.
  )
 
+;; Using Skim instead of preview.
+(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+
+(setq TeX-source-correlate-method 'synctex)
+
+(add-hook 'LaTeX-mode-hook
+      (lambda()
+        (add-to-list 'TeX-expand-list
+             '("%q" skim-make-url))))
+
+(defun skim-make-url ()
+  (concat
+   (TeX-current-line)
+   " \""
+   (expand-file-name (funcall file (TeX-output-extension) t)
+             (file-name-directory (TeX-master-file)))
+   "\" \""
+   (buffer-file-name)
+   "\""))
+
+(setq TeX-view-program-list
+  '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline %q")))
+
+(setq TeX-view-program-selection '((output-pdf "Skim")))
+
+
+
+
+
+
 ;; JAVA MOde JDEE
 (setq jde-help-remote-file-exists-function '("beanshell"))
 (add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp/")
@@ -35,7 +65,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (add-to-list 'magic-mode-alist 
     '("\\(?:<\\?xml\\s +[^>]*>\\)?\\s *<\\(?:!--\\(?:[^-]\\|-[^-]\\)*-->\\s *<\\)*\\(?:!DOCTYPE\\s +[^>]*>\\s *<\\s *\\(?:!--\\(?:[^-]\\|-[^-]\\)*-->\\s *\<\\)*\\)?[Hh][Tt][Mm][Ll]"
       . html-mode))
-;; Use it in LaTexP (in emacs, not aquamacs)
+;; Use the path and open recent files in LaTexP (in emacs, not aquamacs)
 (when (not (featurep 'aquamacs))
   (funcall 'set-exec-path-from-shell-PATH)
   (require 'recentf)
@@ -45,6 +75,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; Also, by default I want line wrapping, but not breaking.
 (auto-fill-mode -1)
 (remove-hook 'text-mode-hook #'turn-on-auto-fill)
+(setq line-move-visual t)
 
 ;; And tab behaves like tab.
 (global-set-key (kbd "TAB") #'tab-to-tab-stop)
@@ -103,6 +134,9 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;; inhibit startup (if you want).
 ;;(setq inhibit-startup-message 1)
+
+;; Disable the system bell and or flashing
+(setq ring-bell-function 'ignore)
 
 ;; change dir of splash screen
 (setq command-line-default-directory "~/")
