@@ -1,5 +1,5 @@
 # emacsAsEditor
-A fan of geany that can't find an equivalent FREE text editor in MacOS. Finally I am just setting up emacs so it can do what geany can with ease.
+A fan of geany that can't find an equivalent FREE text editor in MacOS. Finally I am just setting up emacs so it can do what geany can with ease. Now, after a while, Geany did come out for MAC, but by now I am very used to emacs. Sorry geany.
 
 This repo is simply my .emacs and .emacs.d/ folder with everything you need to make emacs look like a modern text editor, as well as behave as a modern text editor (to a great extent). 
 
